@@ -1,0 +1,7 @@
+# Compile and test buggy version with ASan
+gcc -fsanitize=address -g memory_errors_buggy.c -o memory_errors_buggy
+./memory_errors_buggy
+
+# Compile and test fixed version with ASan (Clean run)
+gcc -fsanitize=address -g memory_errors_fixed.c -o memory_errors_fixed
+./memory_errors_fixed
